@@ -1,4 +1,7 @@
-[meta title:"Page Title" description:"Short description of your project" /]
+[meta
+  title:"Idyll Fixed Feature"
+  description:"Short description of your project"
+/]
 
 [Header
   title:"Idyll Fixed Feature"
