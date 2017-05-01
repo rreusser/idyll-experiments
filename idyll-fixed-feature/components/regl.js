@@ -32,10 +32,10 @@ class Regl extends IdyllComponent {
       vert: `
         precision mediump float;
         attribute float x;
-        uniform float aspect, t;
+        uniform float aspect, t, k, a, p;
         void main () {
-          vec2 uv = vec2(x, cos((x * 8.0 + 4.0 * t) / aspect));
-          gl_Position = vec4(uv.x, uv.y * 0.5, 0.0, 1.0);
+          vec2 uv = vec2(x, cos((x * k + 4.0 * t) / aspect - p));
+          gl_Position = vec4(uv.x, a * uv.y * 0.5, 0.0, 1.0);
           gl_PointSize = 5.0;
         }
       `,
@@ -51,7 +51,10 @@ class Regl extends IdyllComponent {
       },
       uniforms: {
         aspect: ctx => ctx.viewportHeight / ctx.viewportWidth,
-        t: regl.prop('t')
+        t: regl.prop('t'),
+        k: regl.prop('k'),
+        a: regl.prop('a'),
+        p: regl.prop('p')
       },
       primitive: 'point',
       count: n
@@ -63,7 +66,10 @@ class Regl extends IdyllComponent {
 
       regl.clear({color: [1, 1, 1, 1]})
       draw({
-        t: this.props.var
+        t: this.props.position,
+        k: this.props.wavenumber,
+        a: this.props.amplitude,
+        p: this.props.phase
       });
 
       this.dirty = false;
@@ -75,7 +81,11 @@ class Regl extends IdyllComponent {
   }
 
   shouldComponentUpdate (nextProps) {
-    if (nextProps.var !== this.props.var) {
+    if (nextProps.position !== this.props.position ||
+      nextProps.wavenumber !== this.props.wavenumber ||
+      nextProps.amplitude !== this.props.amplitude ||
+      nextProps.phase !== this.props.phase
+    ) {
       this.dirty = true;
     }
     return false;

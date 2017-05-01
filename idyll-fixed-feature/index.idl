@@ -25,15 +25,27 @@ This component implements a section with fixed background content that stays fix
 Ad eum elit deserunt. Has unum accommodare at, qui no regione omnesque, ne quidam docendi quo. Ea mei vocent commodo appareat. Sea adhuc nemore id, in nec reque mollis evertitur, has in harum minimum. Ei solum illud vel, graeci quaerendum adversarium at eam. Ius quidam timeam ea, offendit tincidunt sadipscing pri ut. Consul timeam propriae pro an, vitae labores perpetua mea ea, populo qualisque nec id.
 
 [var name:"position" value:0 /]
+[var name:"wavenumber" value:5 /]
+[var name:"amplitude" value:1 /]
+[var name:"phase" value:0 /]
 
 [Feature value:position]
   [FeatureContent]
-    [Regl var:position/]
+    [Regl position:position wavenumber:wavenumber amplitude:amplitude phase:phase/]
   [/FeatureContent]
 
-  [Screen]Screen 1, position: [DisplayVar var:position /][/Screen]
-  [Screen]Screen 2, Position: [DisplayVar var:position /][/Screen]
-  [Screen]Screen 3, Position: [DisplayVar var:position /][/Screen]
+  [Screen]
+    Wavenumber: [range value:wavenumber min:0 max:10 step:0.1/] ([DisplayVar var:wavenumber /])
+  [/Screen]
+
+  [Screen]
+    Amplitude: [range value:amplitude min:0 max:2 step:0.01/] ([DisplayVar var:amplitude /])
+  [/Screen]
+
+  [Screen]
+    Phase: [range value:phase min:0 max:`Math.PI * 2` step:`Math.PI * 2 / 100`/] ([DisplayVar var:phase /])
+  [/Screen]
+
 [/Feature]
 
 Oblique disputando te sit, no pro nonumes atomorum, veniam doming labitur te sea. Pro alii tale error ad, vero malis civibus vis et. Quo eu eruditi principes. Ad vix bonorum lobortis, vis id appetere verterem tractatos, et perfecto consequat comprehensam mel. Ut temporibus dissentiunt sed. Has libris iisque lucilius ad, id accumsan philosophia eos. Et nam atqui veritus.
