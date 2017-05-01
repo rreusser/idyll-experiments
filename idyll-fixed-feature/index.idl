@@ -1,0 +1,49 @@
+[meta title:"Page Title" description:"Short description of your project" /]
+
+[Header
+  title:"Idyll Fixed Feature"
+  author:"Ricky Reusser"
+  authorLink:"https://github.com/rreusser"
+/]
+
+This component implements a section with fixed background content that stays fixed while foreground content scrolls over it. In particular, the `FeatureContent` element stays fixed while all other children determine the size of the section. I've used `Screen` elements here that take up one screen-height worth of space.
+
+```
+[var name:"position" value:0 /]
+
+[Feature value:position]
+  [FeatureContent]
+    [Regl var:position/]
+  [/FeatureContent]
+
+  [Screen]Screen 1, position: [DisplayVar var:position /][/Screen]
+  [Screen]Screen 2, Position: [DisplayVar var:position /][/Screen]
+  [Screen]Screen 3, Position: [DisplayVar var:position /][/Screen]
+[/Feature]
+```
+
+Ad eum elit deserunt. Has unum accommodare at, qui no regione omnesque, ne quidam docendi quo. Ea mei vocent commodo appareat. Sea adhuc nemore id, in nec reque mollis evertitur, has in harum minimum. Ei solum illud vel, graeci quaerendum adversarium at eam. Ius quidam timeam ea, offendit tincidunt sadipscing pri ut. Consul timeam propriae pro an, vitae labores perpetua mea ea, populo qualisque nec id.
+
+[var name:"position" value:0 /]
+
+[Feature value:position]
+  [FeatureContent]
+    [Regl var:position/]
+  [/FeatureContent]
+
+  [Screen]Screen 1, position: [DisplayVar var:position /][/Screen]
+  [Screen]Screen 2, Position: [DisplayVar var:position /][/Screen]
+  [Screen]Screen 3, Position: [DisplayVar var:position /][/Screen]
+[/Feature]
+
+Oblique disputando te sit, no pro nonumes atomorum, veniam doming labitur te sea. Pro alii tale error ad, vero malis civibus vis et. Quo eu eruditi principes. Ad vix bonorum lobortis, vis id appetere verterem tractatos, et perfecto consequat comprehensam mel. Ut temporibus dissentiunt sed. Has libris iisque lucilius ad, id accumsan philosophia eos. Et nam atqui veritus.
+
+Dicant reprimique pri ut, duo te alii evertitur, iuvaret explicari sea cu. Eos ne autem fabulas, exerci referrentur definitionem duo cu. At ubique inermis pri, et vis simul verear. Eu usu perpetua temporibus, duo an feugiat voluptua dissentiet, cu vim atomorum conclusionemque.
+
+Mei ad sanctus recteque reprimique, vix ei nusquam delectus volutpat. Sit te albucius scaevola, facete ullamcorper eu per, eum populo lobortis mediocrem cu. In cum nisl graece, qui cu dicta volumus. Possim aliquid conclusionemque no mel, an nam commodo expetenda molestiae, aperiam similique an vix.
+
+Sit no accumsan iudicabit. Quo virtute praesent at, pro at imperdiet intellegebat. Pri graeco perpetua argumentum id. Liber essent nec te, incorrupte suscipiantur ut qui.
+
+Eos vidisse molestie quaestio id. Eu eripuit fabellas eam. Sale iuvaret eos te. Duo hinc falli persius at, te malorum habemus vix. Tritani mandamus suavitate cu duo, est veri solet omnesque at, an veniam insolens has. Vis eripuit intellegat cu, mea fabulas delicata id. Sed ad unum putant fastidii.
+
+Ad eum elit deserunt. Has unum accommodare at, qui no regione omnesque, ne quidam docendi quo. Ea mei vocent commodo appareat. Sea adhuc nemore id, in nec reque mollis evertitur, has in harum minimum. Ei solum illud vel, graeci quaerendum adversarium at eam. Ius quidam timeam ea, offendit tincidunt sadipscing pri ut. Consul timeam propriae pro an, vitae labores perpetua mea ea, populo qualisque nec id.

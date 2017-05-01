@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Fira+Mono:400,500,700|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i');
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+.idyll-root {
+  box-sizing: border-box;
+}
+
+.hed {
+  font-family: 'Archivo Black', sans-serif;
+}
+
+.byline {
+  font-family: 'Fira Mono', monospace;
+}
+
+.idyll-quote {
+  margin: 2em 15px;
+}
+
+.idyll-quote figcaption {
+  text-align: right;
+  margin-right: 2em;
+}
+
+.idyll-quote blockquote {
+  margin-bottom: 0.3em;
+}
+
+.idyll-quote cite:before {
+  content: "—";
+}
+
+.idyll-feature {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
