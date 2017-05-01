@@ -1,6 +1,7 @@
-{
+
   "name": "idyll-fixed-feature",
   "version": "1.0.0",
+  "license": "MIT",
   "scripts": {
     "start": "idyll index.idl --css styles.css --layout centered --theme github --no-spellcheck",
     "build:idyll": "idyll index.idl --layout centered --theme github --css styles.css --build; cp -r {images,fonts} build/;",
