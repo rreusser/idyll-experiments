@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "idyll index.idl --css styles.css --layout centered --theme github --no-spellcheck",
-    "build:idyll": "idyll index.idl --layout centered --theme github --css styles.css --build; cp -r {images,fonts} build/;",
+    "build:idyll": "idyll index.idl --layout centered --theme github --css styles.css --build --no-spellcheck && cp -r {images,fonts} build/;",
     "build:template": "cat _template.html | html-inject-github-corner > _index.html",
     "build": "npm run build:template && npm run build:idyll",
     "deploy": "npm run build && rm -rf ../docs/idyll-fixed-feature && cp -r ./build ../docs/fixed-feature"

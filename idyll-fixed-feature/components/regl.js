@@ -42,8 +42,8 @@ class Regl extends IdyllComponent {
       frag: `
         precision mediump float;
         void main () {
-          float c = smoothstep(0.4, 0.5, length(gl_PointCoord - 0.5));
-          gl_FragColor = vec4(vec3(c), 1);
+          float c = smoothstep(0.3, 0.5, length(gl_PointCoord - 0.5));
+          gl_FragColor = vec4(vec3(1.0 - 0.5 * (1.0 - c)), 1);
         }
       `,
       attributes: {
