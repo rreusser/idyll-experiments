@@ -1,0 +1,37 @@
+{
+  "name": "flight",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "idyll index.idl --css styles.css --layout centered --theme github --no-spellcheck",
+    "build:idyll": "idyll index.idl --layout centered --theme github --css styles.css --build --no-spellcheck && cp -r {images,fonts} build/;",
+    "build:template": "cat _template.html | html-inject-github-corner > _index.html",
+    "build:data": "mkdir -p ../build/data && cp -r data/* ../build/data",
+    "build": "mkdir -p ../build/flight && npm run build:template && npm run build:idyll",
+    "deploy": "npm run build && rm -rf ../docs/flight && cp -r ./build ../docs/flight"
+  },
+  "dependencies": {
+    "idyll": "https://github.com/idyll-lang/idyll.git",
+    "idyll-default-components": "^1.0.0"
+  },
+  "devDependencies": {
+    "debounce": "^1.0.2",
+    "eases": "^1.0.0",
+    "gh-pages": "^0.12.0",
+    "gl-mat4": "^1.1.4",
+    "global": "^4.3.0",
+    "hash.js": "^1.0.0",
+    "html-inject-github-corner": "^2.0.0",
+    "interaction-events": "git@github.com:rreusser/interaction-events.git",
+    "mouse-change": "^1.4.0",
+    "regl": "^1.3.0",
+    "shallow-equal": "^1.0.0",
+    "uglify-js": "^2.7.5",
+    "xtend": "^4.0.1"
+  },
+  "github-corner": {
+    "url": "https://github.com/rreusser/idyll-experiments/tree/master/flight",
+    "fg": "#333",
+    "bg": "#fff"
+  }
+}
