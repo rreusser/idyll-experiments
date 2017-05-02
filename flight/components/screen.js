@@ -4,11 +4,24 @@ const Container = require('./container');
 const extend = require('xtend');
 
 class Screen extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      height: window.innerHeight
+    };
+  }
+
+  componentDidMount () {
+    window.addEventListener('resize', () => {
+      this.setState({height: window.innerHeight});
+    });
+  }
+
   render () {
     let overlayStyle = {
       position: 'relative',
       zIndex: 1,
-      height: window.innerHeight + 'px',
+      height: this.state.height + 'px',
       pointerEvents: 'none',
     };
 

@@ -77,7 +77,7 @@ module.exports = function makeCamera2D (regl, opts) {
 
   var dViewport = [];
 
-  interactionEvents({
+  /*interactionEvents({
     element: element,
   }).on('interactionstart', function (ev) {
     //ev.preventDefault();
@@ -128,7 +128,7 @@ module.exports = function makeCamera2D (regl, opts) {
     mat4.multiply(mView, dViewport, mView);
 
     dirty = true;
-  });
+  });*/
 
   var setProps = regl({
     context: {

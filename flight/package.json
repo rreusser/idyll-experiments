@@ -7,7 +7,7 @@
     "build:idyll": "idyll index.idl --layout centered --theme github --css styles.css --build --no-spellcheck && cp -r {images,fonts} build/;",
     "build:template": "cat _template.html | html-inject-github-corner > _index.html",
     "build:data": "mkdir -p ../build/data && cp -r data/* ../build/data",
-    "build": "mkdir -p ../build/flight && npm run build:template && npm run build:idyll",
+    "build": "npm run build:template && npm run build:data && npm run build:idyll",
     "deploy": "npm run build && rm -rf ../docs/flight && cp -r ./build ../docs/flight"
   },
   "dependencies": {
