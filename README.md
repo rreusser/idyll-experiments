@@ -1,4 +1,4 @@
 # idyll-experiments
 
-- [fixed-feature](http://rickyreusser.com/idyll-experiments/fixed-feature/)
+- [fixed-feature](rreusser.github.io/idyll-experiments/fixed-feature/)
 - [flight](http://rreusser.github.io/idyll-experiments/flight)
