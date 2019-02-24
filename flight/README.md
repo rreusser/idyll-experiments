@@ -1,3 +1,3 @@
-# [flight](http://rickyreusser.com/idyll-experiments/flight/)
+# [flight](https://rreusser.github.io/idyll-experiments/flight/)
 
 ???

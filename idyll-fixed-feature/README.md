@@ -1,6 +1,6 @@
 # idyll-fixed-feature
 
-> [fixed-feature](http://rickyreusser.com/idyll-experiments/fixed-feature/)
+> [fixed-feature](https://rreusser.github.io/idyll-experiments/fixed-feature/)
 
 ```
 [var name:"position" value:0 /]
